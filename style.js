@@ -3,13 +3,13 @@ const d = days[new Date().getDay()-1]
 const day =`${d} `;
 document.getElementById("day").innerHTML = `${day}`;
 
-let date = new Date();
-let hour = date.getHours() - 1;
-let min = date.getMinutes();
-let sec = date.getSeconds();
-let period = "AM";
 
 const showTime = ()=>{
+    let date = new Date();
+    let hour = date.getHours() - 1;
+    let min = date.getMinutes();
+    let sec = date.getSeconds();
+    let period = "AM";
 
 
     if(hour == 0){
@@ -34,6 +34,7 @@ const showTime = ()=>{
     }
 
     let time = `${hour}:${min}:${sec} ${period}`
+    console.log(time);
 
     document.getElementById("time").innerHTML = time;
 
